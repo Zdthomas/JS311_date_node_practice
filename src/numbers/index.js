@@ -28,18 +28,18 @@ const comboSum = (arr, sum) => {
 
     if (currentSum === sum) {
 
-      return true; // Combination found
+      return true; 
 
     }
 
     if (index === arr.length) {
 
       return false; 
-      // Reached the end of the array without finding a combination
+     
 
     }
 
-    // Include the current element in the combination
+    
 
     if (findCombination(index + 1, currentSum + arr[index])) {
 
@@ -47,74 +47,21 @@ const comboSum = (arr, sum) => {
 
     }
 
-    // Exclude the current element from the combination
-    return findCombination(index + 1, currentSum);
     
+    return findCombination(index + 1, currentSum);
+
   };
 
-  return false;
+  return false
+ 
 }
 
-
-
-
-  // const result = [];
-
-  // const findCombo = (combo, arr, sum) => {
-
-  //   if (sum === 0) {
-
-  //     result.push([...combo]);
-  //     return
-
-  //   }
-
-  //   for (let i = 0; i < arr.length; i++) {
-
-  //     const num = arr[i];
-
-  //     if (num <= sum) {
-
-  //       combo.push(num);
-
-  //       findCombo(combo, arr.slice(i), sum - num);
-
-  //       combo.pop();
-
-  //     }
-
-  //   }
-
-  // };
-
-  
-  // return result;
-  
+// Couldn't get it to run successfully and return false without just saying false. I may have misunderstood what combination sum is.
 
 
 
   
 
-
-
-
-
-
-  // let arr = [1, 2, 3, 6, 8, 9]
-
-  // let newArr = []
-
-  // let sum = 0
-
-  // let result = 24
-
-  // if (sum === result) {
-
-  //   result.push(newArr);
-
-  //   return
-
-  // }
   
   
 
